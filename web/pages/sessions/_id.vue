@@ -22,6 +22,7 @@ import groq from 'groq'
 import sanityClient from '~/sanityClient'
 import SanityImage from '~/components/SanityImage'
 import PersonBlock from '~/components/blockContent/PersonBlock'
+import Greetings from '../../components/Greetings.vue'
 
 const query = groq`
   *[_type == "session" && _id == $id] {
@@ -47,7 +48,8 @@ export default {
     return {
       serializers: {
         types: {
-          personReference: PersonBlock
+          personReference: PersonBlock,
+          greeting: Greetings
         }
       }
     }

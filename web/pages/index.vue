@@ -10,7 +10,6 @@
       </div>
       <div class="venue">{{ info.venue.name }}, {{ info.venue.city }}</div>
     </header>
-
     <figure :v-if="info.image">
       <SanityImage
         :image="info.image"
