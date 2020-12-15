@@ -1,3 +1,11 @@
+import React from 'react'
+
+const highlightRender = props => (
+  <span style={{color: 'blue'}}>{props.children}</span>
+)
+const highlightIcon = () => (
+  <span style={{fontWeight: 'bold'}}>H</span>
+)
 export default {
   name: 'bodyPortableText',
   type: 'array',
@@ -23,9 +31,16 @@ export default {
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
         // preference or highlighting by editors.
-        decorators: [{title: 'Strong', value: 'strong'}, {title: 'Emphasis', value: 'em'}],
+        decorators: [{title: 'Strong', value: 'strong'}, {title: 'Emphasis', value: 'em'}, {
+          title: 'red',
+          value: 'red',
+          blockEditor: {
+            icon: highlightIcon,
+            render: highlightRender
+          }
+        }],
         // Annotations can be any object structure – e.g. a link or a footnote.
-        annotations: [
+        annotations: [{name: 'color', title: 'Color', type: 'color'},
           {
             name: 'link',
             type: 'object',
