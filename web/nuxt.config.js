@@ -46,7 +46,27 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/pwa'],
+  modules: [
+    ['@nuxtjs/pwa'],
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: 'AIzaSyAopTvaR4jDmxmuHkBYr9iIfxTviBIlmag',
+          authDomain: 'behind-themask.firebaseapp.com',
+          databaseURL:
+            'https://behind-themask-default-rtdb.europe-west1.firebasedatabase.app',
+          projectId: 'behind-themask',
+          storageBucket: 'behind-themask.appspot.com',
+          messagingSenderId: '530034600999',
+          appId: '1:530034600999:web:83ab77e1f79f3f4b1b7202'
+        },
+        services: {
+          firestore: true // Just as example. Can be any other service.
+        }
+      }
+    ]
+  ],
 
   /*
    ** Set global info from sanity document
