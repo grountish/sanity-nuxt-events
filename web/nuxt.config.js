@@ -37,7 +37,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/eventInformation'],
+  plugins: [
+    '~/plugins/eventInformation',
+    { src: '~/plugins/vue-select', mode: 'client' },
+    { src: '~/plugins/html2canvas.js', mode: 'client' }
+  ],
 
   /*
    ** Nuxt.js modules

@@ -21,7 +21,9 @@
     "normalize.css": "^8.0.1",
     "nuxt": "^2.6.2",
     "sanity-blocks-vue-component": "^0.1.0",
-    "vue-date-fns": "^1.0.0"
+    "vue-date-fns": "^1.0.0",
+    "vue-html2canvas": "0.0.4",
+    "vue-select": "^3.10.8"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
