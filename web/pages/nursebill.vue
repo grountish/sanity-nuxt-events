@@ -36,7 +36,9 @@
       </p>
       <button>Download</button>
 
-      <p>your receipt now and share to Socasdial Media with the Hashtag #MoMN</p>
+      <p>
+        your receipt now and share to Socasdial Media with the Hashtag #MoMN
+      </p>
     </div>
 
     <div>
