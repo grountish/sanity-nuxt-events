@@ -65,6 +65,9 @@
     </div>
     <div>
       <img :src="output" />
+      <a v-if="showDownload" ref="download" :href="output" download
+        >Download file</a
+      >
     </div>
   </div>
 </template>
@@ -92,7 +95,8 @@ export default {
   data() {
     return {
       output: null,
-      showPrint: true
+      showPrint: true,
+      showDownload: false
     }
   },
   methods: {
@@ -106,6 +110,7 @@ export default {
         }).then(canvas => {
           console.log(canvas)
           this.output = canvas.toDataURL('image/jpeg', 0.1)
+          this.showDownload = true
         })
       }, 500)
     }
